@@ -22,11 +22,11 @@ public class TakingScreenshots {
         TakesScreenshot ts = (TakesScreenshot)driver;
         File sourceFile = ts.getScreenshotAs(OutputType.FILE); // скриншот сделан на этом шаге
 
-        try{
-            FileUtils.copyFile(sourceFile, new File("screenshots/SmartBear/adminLogin.png"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try{
+//            FileUtils.copyFile(sourceFile, new File("screenshots/SmartBear/adminLogin.png"));
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
 
 

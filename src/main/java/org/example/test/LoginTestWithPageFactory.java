@@ -24,11 +24,11 @@ public class LoginTestWithPageFactory {
         TakesScreenshot ts = (TakesScreenshot)BaseClass.driver;
         File sourceFile = ts.getScreenshotAs(OutputType.FILE);
 
-        try {
-            FileUtils.copyFile(sourceFile, new File("screenshots/HRMS/dashboard.png"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            FileUtils.copyFile(sourceFile, new File("screenshots/HRMS/dashboard.png"));
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
         String welcomeText = dashboardPage.welcomeAdmin.getText();
         System.out.println(welcomeText);
