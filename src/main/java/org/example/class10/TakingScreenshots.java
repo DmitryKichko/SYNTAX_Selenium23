@@ -12,6 +12,7 @@ public class TakingScreenshots {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         WebDriver driver = new ChromeDriver();
+        driver.findElement(By.className(""));
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/login.aspx");
         //driver.manage().window().maximize();
         WebElement username = driver.findElement(By.name("ctl00$MainContent$username"));
