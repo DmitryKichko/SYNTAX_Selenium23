@@ -1,0 +1,86 @@
+Selenium Class 3
+
+=========================================================================================
+
+Зачем нам нужен Xpath или Cas Selector?
+-- разработчики не будут предоставлять все локаторы в html.
+-- используя xpath и css selector, мы можем идентифицировать элементы с любыми заданными атрибутами.
+
+Что такое Xpath?
+xpath - это язык запросов, который помогает нам идентифицировать элементы
+уникальным образом на веб-странице
+
+Типы Xpath:
+Абсолютный Xpath --> начинается с начального узла в html
+                     он всегда начинается с одинарной косой черты (/)
+                     например, /html/body/div/div/div/div
+
+Относительный Xpath --> начинается с любого узла в html
+                    начинается с двойной косой черты (//)
+
+Синтаксис для относительного xpath:
+//tagname[@attribute = 'attribute value']
+
+Пример: //input[@class = 'input']
+
+Идентификация элементов по тексту:
+//tagname[text() = 'text value']
+
+Пример: //a[text() = 'Forgot login info?']
+
+Идентификация элементов с помощью метода "contains":
+//tagname[contains(@attribute, 'partial attribute value')]
+
+Пример: //input[contains(@class,'input')]
+
+Starts-with определяет элементы с начальным частичным значением:
+//tagname[starts-with(@attribute, 'partial starting attribute value')]
+
+Пример: //input[starts-with(@value, 'Log In')]
+         //button[starts-with(text(), 'Log')]
+
+Ends-with использовался в xpath 1.0, мы используем 2.0 и этот метод недоступен:
+
+<div> -- division (подразделение)
+<img> -- image (изображение)
+<h> -- header (заголовок)
+<p> -- paragraph (параграф)
+<li> -- list (список)
+<ul> -- unordered list (неупорядоченный список)
+<ol> -- ordered list (упорядоченный список)
+
+Расширенный Xpath
+основан на родительских и дочерних отношениях, отношениях между братьями и сестрами
+
+Идентификация элементов по следующему брату или сестре:
+//tagname[@attribute = 'attribute value']/following-sibling::tagname
+
+Пример: //input[@id = 'calFromDate']/following-sibling::img
+
+Идентификация элементов по предшествующему брату или сестре:
+//tagname[@attribute = 'attribute value']/preceding-sibling::tagname
+
+Пример: //span[text() = '& Orders']/preceding-sibling::span
+
+Идентификационные элементы родитель:
+//tagname[@attribute = 'attribute value']/parent::parentTagname
+
+Пример: //span[text() = '& Orders']/parent::a
+
+Идентификация элементов предок:
+//tagname[@attribute = 'attribute value']/ancestor::ancestorTagname
+
+Пример: //input[@id = 'glowValidationToken']/ancestor::div
+
+Пример: //input[@id = 'glowValidationToken']/ancestor::div/div/div
+
+Идентификация элементов по индексу:
+(//span[@class = 'nav-line-1'])[2]
+
+HW
+Перейдите на сайт http://syntaxprojects.com
+Нажмите на "Начать практиковаться
+нажмите на демонстрацию простой формы
+введите любой текст в первое текстовое поле
+нажмите на показать письмо
+выйти из браузера
