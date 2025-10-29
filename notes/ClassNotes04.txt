@@ -1,0 +1,87 @@
+Selenium Class 4
+
+===================================================================================================
+
+Селектор CSS (каскадная таблица стилей)
+
+это еще один способ расположения элементов на веб-странице
+
+Синтаксис:
+tagname[attribute = 'attribute value']
+
+Пример: input[type = 'submit']
+
+CSS не дает возможности находить элементы по их тексту
+
+Ярлыки для CSS:
+Ярлык для className --> "."
+
+Синтаксис:
+tagname.classNameValue
+
+Пример: input.form-control
+
+Сокращение для идентификатора ID - "#"
+Синтаксис: tagname#IDValue
+
+Пример: input#twotabsearchtextbox
+
+метод contains() в css: * символ представляет метод contains
+Синтаксис: tagname[attribute *= 'partial attribute value']
+
+Пример: input[name *= 'crid']
+
+метод starts-with в css: Символ ^ представляет метод starts with в css
+Синтаксис: tagname[attribute ^= 'starting attribute value']
+
+Пример: input[type^="password"]
+
+Метод ends-with в css: символ $ представляет метод ends css
+Синтаксис: tagname[attribute $= 'ending attribute value']
+
+Пример: img[src $= 'clear.gif']
+
+Команды веб-элемента:
+состоят из нескольких методов, с помощью которых мы можем выполнять действия и получать состояние элемента
+на веб-странице
+
+isEnabled() -- boolean value
+isDisplayed() -- boolean value
+isSelected() -- boolean value
+clear() -- void
+getText -- String value
+getAttribute() -- String value
+submit() -- void
+======================================================================================================
+
+Task
+Откройте браузер хром
+Перейдите на страницу "http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login".
+Введите действительное имя пользователя и пароль (имя пользователя - Admin, пароль - Hum@nhrm123)
+Нажмите на кнопку входа в систему
+Затем проверьте отображение логотипа Синтаксис
+
+TC 1: подсчет ссылок Amazon:
+Откройте браузер хром
+Перейдите на "https://www.amazon.com/".
+Получите все ссылки
+Получить количество ссылок, содержащих текст
+Выведите на консоль только те ссылки, в которых есть текст
+
+HW 2
+Приложение HRMS Негативный вход:
+Откройте браузер chrome
+Перейдите на "http://hrm.syntaxtechs.net/humanresources/symfony/web/index.php/auth/login"
+Введите действительное имя пользователя
+Оставьте поле пароля пустым
+Нажмите на кнопку входа
+Появится сообщение об ошибке с текстом "Пароль не может быть пустым".
+
+
+
+
+
+
+
+
+
